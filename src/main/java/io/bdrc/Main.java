@@ -52,7 +52,7 @@ public class Main {
 	     csvReader.close();
 		corrFileReader.close();
 		
-		FileWriter fw = new FileWriter("corr2.csv");
+		FileWriter fw = new FileWriter(corrFile);
 		CSVWriter csvWriter = new CSVWriter(fw);
 		
 		csvWriter.writeAll(newLines, true);
@@ -60,7 +60,7 @@ public class Main {
 		csvWriter.close();
 		fw.close();
 		
-		System.out.println(badLines+" problematic on "+allLines+" (rate: "+(badLines/allLines)+")");
+		System.out.println(badLines+" problematic on "+allLines+" (rate: "+((double)badLines/(double)allLines)+")");
 		
 	}
 }
