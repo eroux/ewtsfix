@@ -23,7 +23,7 @@ public class Main {
 		allLines += 1;
 		String firstPart = line[0];
 		if (firstPart.startsWith("OK:") || firstPart.startsWith("LNG:"))
-			return line;
+			return new String[] {firstPart};;
 		final List<String> warns = new ArrayList<>();
 		converter.toUnicode(firstPart, warns, true);
 		if (warns.isEmpty())
