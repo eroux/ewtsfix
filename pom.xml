@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.bdrc</groupId>
+  <artifactId>ewtsfix</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0.0</version>
+  <name>lucene-bo</name>
+  <description>Fixing EWTS data</description>
+  <url>https://github.com/BuddhistDigitalResourceCenter/ewtsfix</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <build>
+  <plugins>
+  <plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>exec-maven-plugin</artifactId>
+  <version>1.6.0</version>
+  <executions>
+    <execution>
+      <goals>
+        <goal>java</goal>
+      </goals>
+    </execution>
+  </executions>
+  <configuration>
+    <mainClass>io.bdrc.Main</mainClass>
+  </configuration>
+</plugin>
+</plugins>
+</build>
+  <dependencies>
+    <dependency>
+      <groupId>io.bdrc.ewtsconverter</groupId>
+      <artifactId>ewts-converter</artifactId>
+      <version>1.1.0</version>
+    </dependency>
+      <dependency>
+     <groupId>com.opencsv</groupId>
+     <artifactId>opencsv</artifactId>
+     <version>4.0</version>
+  </dependency>
+  </dependencies>
+</project>
